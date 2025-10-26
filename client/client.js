@@ -18,7 +18,7 @@ window.addEventListener("beforeunload", () => {
   Delete(playerLocal.id);
 });
 
-conectar();
+await conectar();
 
 context.clearRect(0, 0, screen.width, screen.height);
 context.fillStyle = "#000000";
@@ -86,7 +86,7 @@ async function movePlayer() {
 requestAnimationFrame(gameLoop);
 
 async function gameLoop() {
-  movePlayer();
+  await movePlayer();
   game.players = await Get();
   desenharJogo();
   requestAnimationFrame(gameLoop);
