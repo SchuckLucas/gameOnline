@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/players/";
+const URL = "https://api-game-gold.vercel.app/players/";
 
 async function Get() {
   const req = await fetch(URL, { method: "GET" });
@@ -39,3 +39,4 @@ async function Delete(id) {
 }
 
 export { Get, Post, Put, Delete };
+
