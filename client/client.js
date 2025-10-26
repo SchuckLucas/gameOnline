@@ -83,10 +83,11 @@ async function movePlayer() {
   });
 }
 
-setInterval(gameLoop, 100);
+requestAnimationFrame(gameLoop);
 
 async function gameLoop() {
   await movePlayer();
   game.players = await Get();
   desenharJogo();
+  requestAnimationFrame(gameLoop);
 }
